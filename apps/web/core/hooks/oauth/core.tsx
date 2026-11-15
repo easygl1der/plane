@@ -63,7 +63,7 @@ export const useCoreOAuthConfig = (oauthActionText: string): TOAuthConfigs => {
     },
     {
       id: "gitlab",
-      text: `${oauthActionText} with GitLab`,
+      text: `${oauthActionText} with Wrise`,
       icon: <img src={gitlabLogo} height={18} width={18} alt="GitLab Logo" />,
       onClick: () => {
         window.location.assign(`${API_BASE_URL}/auth/gitlab/${next_path ? `?next_path=${next_path}` : ``}`);

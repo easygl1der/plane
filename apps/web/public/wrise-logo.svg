@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 112" role="img" aria-labelledby="title desc">
+  <title id="title">WRISE</title>
+  <desc id="desc">WRISE transparent logo</desc>
+  <g fill="none" stroke="#F7FBFF" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 34v50l28-22 28 22V34" stroke-width="5.5"/>
+    <path d="M18 96h56" stroke-width="5.5"/>
+    <path d="M46 62V20" stroke-width="5.5"/>
+    <circle cx="18" cy="17" r="4" fill="#F7FBFF" stroke="none"/>
+    <circle cx="46" cy="8" r="4" fill="#F7FBFF" stroke="none"/>
+    <circle cx="74" cy="17" r="4" fill="#F7FBFF" stroke="none"/>
+  </g>
+  <text x="124" y="72" fill="#F7FBFF" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="500" letter-spacing="18">WRISE</text>
+</svg>

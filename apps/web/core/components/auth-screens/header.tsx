@@ -9,7 +9,7 @@ import { observer } from "mobx-react";
 import Link from "next/link";
 import { AUTH_TRACKER_ELEMENTS } from "@plane/constants";
 import { useTranslation } from "@plane/i18n";
-import { PlaneLockup } from "@plane/propel/icons";
+import { WriseLogo } from "@/components/common/wrise-logo";
 import { PageHead } from "@/components/core/page-title";
 import { EAuthModes } from "@/helpers/authentication.helper";
 import { useInstance } from "@/hooks/store/use-instance";
@@ -70,10 +70,10 @@ export function AuthHeaderBase(props: TAuthHeaderBase) {
   const { pageTitle, additionalAction } = props;
   return (
     <>
-      <PageHead title={pageTitle + " - Plane"} />
+      <PageHead title={pageTitle + " - Wrise Work"} />
       <div className="sticky top-0 flex w-full flex-shrink-0 items-center justify-between gap-6">
         <Link href="/">
-          <PlaneLockup height={20} width={95} className="text-primary" />
+          <WriseLogo />
         </Link>
         {additionalAction}
       </div>
