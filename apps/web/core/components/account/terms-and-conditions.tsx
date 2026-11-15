@@ -33,6 +33,8 @@ function LegalLink({ href, children }: { href: string; children: React.ReactNode
 }
 
 export function TermsAndConditions({ authType = EAuthModes.SIGN_IN }: TermsAndConditionsProps) {
+  // Wrise: no Plane terms or privacy links
+  if (authType) return null;
   return (
     <div className="flex items-center justify-center">
       <p className="text-center text-13 whitespace-pre-line text-tertiary">
