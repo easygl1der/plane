@@ -5,7 +5,7 @@
 # Python imports
 import os
 from datetime import datetime
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 import pytz
 
@@ -53,7 +53,9 @@ class GitLabOAuthProvider(OauthAdapter):
         client_id = GITLAB_CLIENT_ID
         client_secret = GITLAB_CLIENT_SECRET
 
-        redirect_uri = f"""{"https" if request.is_secure() else "http"}://{request.get_host()}/auth/gitlab/callback/"""
+        # Wrise: Plane is served under a sub-path (WEB_URL=https://host/work), so the callback lives under it too
+        web_path = urlparse(os.environ.get("WEB_URL", "")).path.rstrip("/")
+        redirect_uri = f"""{"https" if request.is_secure() else "http"}://{request.get_host()}{web_path}/auth/gitlab/callback/"""
         url_params = {
             "client_id": client_id,
             "redirect_uri": redirect_uri,
