@@ -5,31 +5,19 @@
  */
 
 import React from "react";
-import { AccentureLogo, DolbyLogo, SonyLogo, ZerodhaLogo } from "@plane/propel/icons";
 
-const BRAND_LOGOS: {
-  id: string;
-  icon: React.ReactNode;
-}[] = [
-  {
-    id: "zerodha",
-    icon: <ZerodhaLogo className="h-7 w-24 text-[#387ED1]" />,
-  },
-  {
-    id: "sony",
-    icon: <SonyLogo className="h-7 w-16 dark:text-on-color" />,
-  },
-  {
-    id: "dolby",
-    icon: <DolbyLogo className="h-7 w-16 dark:text-on-color" />,
-  },
-  {
-    id: "accenture",
-    icon: <AccentureLogo className="h-7 w-24 dark:text-on-color" />,
-  },
-];
-
+// Wrise: no marketing line or customer logos; the AGPL notice with the exact source tag
 export function AuthFooter() {
-  // Wrise: no marketing line or customer logos
-  return null;
+  return (
+    <div className="flex justify-center text-13 text-tertiary">
+      <a
+        href="https://github.com/easygl1der/plane/tree/wrise-v1.4.3-root-2"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:text-secondary"
+      >
+        Based on open-source Plane (AGPL-3.0)
+      </a>
+    </div>
+  );
 }

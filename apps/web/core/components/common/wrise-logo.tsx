@@ -11,3 +11,11 @@ export function WriseLogo({ className = "h-5" }: { className?: string }) {
     </span>
   );
 }
+
+export function WriseIcon({ className = "size-5" }: { className?: string }) {
+  return (
+    <span className="inline-flex items-center justify-center rounded-md bg-[#0b1220] p-1">
+      <img src={`${WEB_BASE_PATH}/wrise-icon.svg`} alt="WRISE" className={className} />
+    </span>
+  );
+}

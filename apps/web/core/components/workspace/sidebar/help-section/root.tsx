@@ -53,6 +53,15 @@ export const HelpMenuRoot = observer(function HelpMenuRoot() {
             <span className="text-11">{t("documentation")}</span>
           </div>
         </CustomMenu.MenuItem>
+        <CustomMenu.MenuItem
+          onClick={() =>
+            window.open("https://github.com/easygl1der/plane/tree/wrise-v1.4.3-root-2", "_blank", "noopener,noreferrer")
+          }
+        >
+          <div className="flex items-center gap-x-2">
+            <span className="text-11">Based on open-source Plane (AGPL-3.0)</span>
+          </div>
+        </CustomMenu.MenuItem>
         <CustomMenu.MenuItem onClick={() => window.open("mailto:sales@plane.so", "_blank")}>
           <div className="flex items-center gap-x-2 rounded-sm text-11">
             <User className="h-3.5 w-3.5 text-secondary" size={14} />

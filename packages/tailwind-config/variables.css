@@ -1307,3 +1307,10 @@
   --tw-prose-th-borders: var(--border-color-subtle);
   --tw-prose-td-borders: var(--border-color-subtle);
 }
+
+/* Wrise: motion tokens of wriseai.com (apps/portal/app/global.css): feedback 100ms, moves 220ms */
+:root {
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-feedback: 100ms;
+  --motion-move: 220ms;
+}

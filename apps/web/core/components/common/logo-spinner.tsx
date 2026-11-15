@@ -4,19 +4,13 @@
  * See the LICENSE file for details.
  */
 
-import { useTheme } from "next-themes";
-// assets
-import LogoSpinnerDark from "@/app/assets/images/logo-spinner-dark.gif?url";
-import LogoSpinnerLight from "@/app/assets/images/logo-spinner-light.gif?url";
+import { WriseIcon } from "@/components/common/wrise-logo";
 
+// Wrise: the official icon instead of Plane's spinner gifs
 export function LogoSpinner() {
-  const { resolvedTheme } = useTheme();
-
-  const logoSrc = resolvedTheme === "dark" ? LogoSpinnerDark : LogoSpinnerLight;
-
   return (
     <div className="flex items-center justify-center">
-      <img src={logoSrc} alt="logo" className="h-6 w-auto object-contain sm:h-11" />
+      <WriseIcon className="h-6 w-6 sm:h-9 sm:w-9" />
     </div>
   );
 }
