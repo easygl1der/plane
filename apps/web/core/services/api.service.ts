@@ -7,6 +7,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { AxiosInstance, AxiosRequestConfig } from "axios";
 import { create } from "axios";
+import { WEB_BASE_PATH } from "@plane/constants";
 
 export abstract class APIService {
   protected baseURL: string;
@@ -27,8 +28,9 @@ export abstract class APIService {
       (response) => response,
       (error) => {
         if (error.response && error.response.status === 401) {
-          const currentPath = window.location.pathname;
-          window.location.replace(`/${currentPath ? `?next_path=${currentPath}` : ``}`);
+          // pathname includes the sub-path the app is served under (WEB_BASE_PATH); next_path must not
+          const currentPath = window.location.pathname.replace(new RegExp(`^${WEB_BASE_PATH}(?=/|$)`), "");
+          window.location.replace(`${WEB_BASE_PATH}/${currentPath ? `?next_path=${currentPath}` : ``}`);
         }
         return Promise.reject(error);
       }
