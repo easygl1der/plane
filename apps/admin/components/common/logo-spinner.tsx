@@ -4,18 +4,13 @@
  * See the LICENSE file for details.
  */
 
-import { useTheme } from "next-themes";
-import LogoSpinnerDark from "@/app/assets/images/logo-spinner-dark.gif?url";
-import LogoSpinnerLight from "@/app/assets/images/logo-spinner-light.gif?url";
-
+// Wrise: the official WRISE AI mark instead of Plane's spinner gifs
 export function LogoSpinner() {
-  const { resolvedTheme } = useTheme();
-
-  const logoSrc = resolvedTheme === "dark" ? LogoSpinnerLight : LogoSpinnerDark;
-
   return (
     <div className="flex items-center justify-center">
-      <img src={logoSrc} alt="logo" className="h-6 w-auto sm:h-11" />
+      <span className="inline-flex items-center justify-center rounded-md bg-[#0b1220] p-1">
+        <img src="/wrise-logomark-gold.png" alt="WRISE AI" className="h-6 w-6 object-contain sm:h-9 sm:w-9" />
+      </span>
     </div>
   );
 }

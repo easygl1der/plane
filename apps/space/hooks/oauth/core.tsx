@@ -13,7 +13,6 @@ import type { TOAuthConfigs, TOAuthOption } from "@plane/types";
 import giteaLogo from "@/app/assets/logos/gitea-logo.svg?url";
 import githubLightLogo from "@/app/assets/logos/github-black.png?url";
 import githubDarkLogo from "@/app/assets/logos/github-dark.svg?url";
-import gitlabLogo from "@/app/assets/logos/gitlab-logo.svg?url";
 import googleLogo from "@/app/assets/logos/google-logo.svg?url";
 // hooks
 import { useInstance } from "@/hooks/store/use-instance";
@@ -63,8 +62,8 @@ export const useCoreOAuthConfig = (oauthActionText: string): TOAuthConfigs => {
     },
     {
       id: "gitlab",
-      text: `${oauthActionText} with GitLab`,
-      icon: <img src={gitlabLogo} height={18} width={18} alt="GitLab Logo" />,
+      text: `${oauthActionText} with Wrise`,
+      icon: <img src="/wrise-logomark-gold.png" height={18} width={18} alt="Wrise" className="rounded bg-[#0b1220] p-0.5 object-contain" />,
       onClick: () => {
         window.location.assign(`${API_BASE_URL}/auth/gitlab/${next_path ? `?next_path=${next_path}` : ``}`);
       },

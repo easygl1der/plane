@@ -7,9 +7,9 @@
 
 import type { ISvgIcons } from "../type";
 
-// Wrise: official WRISE logo (public/wrise-icon.svg), on a dark chip because its strokes are near-white
+// Wrise: the official WRISE AI file wriseai.com uses (wrise-logomark-gold.png, unchanged), on a dark chip because it is white and gold
 export function PlaneLogo({ className }: ISvgIcons) {
   return (
-    <span className="inline-flex items-center rounded-md bg-[#0b1220] px-2 py-1"><img src="/wrise-icon.svg" alt="WRISE" className={className ?? "h-5 w-auto"} /></span>
+    <span className="inline-flex items-center rounded-md bg-[#0b1220] px-2 py-1"><img src="/wrise-logomark-gold.png" alt="WRISE AI" className={className ?? "h-5 w-auto object-contain"} /></span>
   );
 }

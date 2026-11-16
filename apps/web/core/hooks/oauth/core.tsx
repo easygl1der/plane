@@ -64,7 +64,7 @@ export const useCoreOAuthConfig = (oauthActionText: string): TOAuthConfigs => {
     {
       id: "gitlab",
       text: `${oauthActionText} with Wrise`,
-      icon: <img src="/wrise-icon.svg" height={18} width={18} alt="Wrise" className="rounded bg-[#0b1220] p-0.5" />,
+      icon: <img src="/wrise-logomark-gold.png" height={18} width={18} alt="Wrise" className="rounded bg-[#0b1220] p-0.5 object-contain" />,
       onClick: () => {
         window.location.assign(`${API_BASE_URL}/auth/gitlab/${next_path ? `?next_path=${next_path}` : ``}`);
       },
