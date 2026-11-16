@@ -46,13 +46,13 @@ export const meta = () => [
   { property: "og:image", content: "https://app.plane.so/og-image.png" },
   { property: "og:image:width", content: "1200" },
   { property: "og:image:height", content: "630" },
-  { property: "og:image:alt", content: "Plane - Modern project management" },
+  { property: "og:image:alt", content: "WRISE AI" },
   { name: "twitter:site", content: "@planepowers" },
   { name: "twitter:card", content: "summary_large_image" },
   { name: "twitter:image", content: "https://app.plane.so/og-image.png" },
   { name: "twitter:image:width", content: "1200" },
   { name: "twitter:image:height", content: "630" },
-  { name: "twitter:image:alt", content: "Plane - Modern project management" },
+  { name: "twitter:image:alt", content: "WRISE AI" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
